@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: C:\Users\wrigh\kompose.exe convert
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: server
+  name: server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: server
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: C:\Users\wrigh\kompose.exe convert
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/app-network: "true"
+        io.kompose.service: server
+    spec:
+      containers:
+        - args:
+            - node
+            - server.js
+          env:
+            - name: NODE_ENV
+              value: development
+          image: wrightchin/mern-demo-server
+          name: mern-demo-node-server
+          ports:
+            - containerPort: 5000
+          resources: {}
+          # volumeMounts:
+          #   - mountPath: /usr/src/app
+          #     name: server-claim0
+          #   - mountPath: /usr/src/app/node_modules
+          #     name: server-claim1
+      restartPolicy: Always
+      # volumes:
+      #   - name: server-claim0
+      #     persistentVolumeClaim:
+      #       claimName: server-claim0
+      #   - name: server-claim1
+      #     persistentVolumeClaim:
+      #       claimName: server-claim1
+status: {}
