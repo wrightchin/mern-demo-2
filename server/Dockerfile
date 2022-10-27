@@ -10,5 +10,5 @@ RUN npm install --silent
 # COPY . .
 COPY . /usr/src/app
 
-EXPOSE 5000
+EXPOSE 5001
 CMD ["npm", "start"]

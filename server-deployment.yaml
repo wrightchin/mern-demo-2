@@ -32,10 +32,10 @@ spec:
           env:
             - name: NODE_ENV
               value: development
-          image: wrightchin/mern-demo-server
+          image: wrightchin/mern-demo-server-2:latest
           name: mern-demo-node-server
           ports:
-            - containerPort: 5000
+            - containerPort: 5001
           resources: {}
           # volumeMounts:
           #   - mountPath: /usr/src/app

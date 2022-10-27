@@ -23,7 +23,7 @@ export default function Create() {
    // When a post request is sent to the create url, we'll add a new record to the database.
    const newPerson = { ...form };
  
-   await fetch("http://localhost:5000/record/add", {
+   await fetch(`http://mern-demo-server-3-wrightchin-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/record/add`, {
      method: "POST",
      headers: {
        "Content-Type": "application/json",

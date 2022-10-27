@@ -14,13 +14,13 @@
 # # RUN chown -R 1001:0 /usr/src/app
 # # RUN sudo chown -R 1001:1001 "/root/.npm"
 # # RUN sudo chown 1001:1001 -R /.npm 
-# # RUN sudo chown -R 1000750000:0 "/.npm"
+# # RUN sudo chown -R 1000750010:0 "/.npm"
 # # RUN chown -R 1001:0 /.npm
 # # RUN chown -R 1001:0 "/npm"
 # USER 1001
 # RUN npm install
 
-# # RUN sudo chown -R 1000750000:0 "/.npm"
+# # RUN sudo chown -R 1000750010:0 "/.npm"
 # # USER 1001
 # COPY --chown=node:node . /usr/src/app
 
