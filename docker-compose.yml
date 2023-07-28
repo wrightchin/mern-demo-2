@@ -34,7 +34,7 @@ services:
     build:
       context: ./client
       dockerfile: Dockerfile
-    image: wrightchin/mern-demo-client:3.0
+    image: wrightchin/mern-demo-client:4
     container_name: mern-demo-react-client
     command: npm start
     volumes: 

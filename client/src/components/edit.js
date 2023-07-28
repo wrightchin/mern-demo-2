@@ -14,7 +14,7 @@ export default function Edit() {
  useEffect(() => {
    async function fetchData() {
      const id = params.id.toString();
-     const response = await fetch(`http://mern-demo-server-3-wrightchin-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/record/${params.id.toString()}`);
+     const response = await fetch(`http://cityu-demo-server-cityu-demo.apps.ocp4.lab.local/record/${params.id.toString()}`);
  
      if (!response.ok) {
        const message = `An error has occurred: ${response.statusText}`;

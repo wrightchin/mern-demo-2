@@ -29,7 +29,7 @@ spec:
         - args:
             - npm
             - start
-          image: wrightchin/mern-demo-client-33:latest
+          image: wrightchin/mern-demo-client-34:latest
           name: mern-demo-react-client
           imagePullPolicy: Always
           ports:

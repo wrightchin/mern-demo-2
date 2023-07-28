@@ -6,6 +6,7 @@ metadata:
     io.kompose.service: data-volume
   name: data-volume
 spec:
+  storageClassName: nfs-client
   accessModes:
     - ReadWriteOnce
   resources:
